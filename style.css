@@ -606,3 +606,47 @@ background:#ccc;
     text-align:center;
   }
 }
+/* ================= MOBILE MENU FIX ================= */
+
+/* Hide menu button on desktop */
+.menu-btn{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:white;
+}
+
+
+/* Mobile View */
+@media (max-width: 768px){
+
+  /* Show ☰ button */
+  .menu-btn{
+    display:block;
+  }
+
+  /* Hide menu by default */
+  nav ul{
+    display:none;
+    flex-direction:column;
+    background:#020a1a;
+
+    position:absolute;
+    top:70px;
+    right:20px;
+
+    padding:15px 20px;
+    border-radius:10px;
+    width:160px;
+  }
+
+  /* Show when active */
+  nav ul.active{
+    display:flex;
+  }
+
+  nav ul li{
+    margin:10px 0;
+    text-align:center;
+  }
+}
