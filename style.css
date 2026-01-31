@@ -1,0 +1,608 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
+body{
+background:#060644;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* Navbar */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#020a1a;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav li{margin:0 15px;}
+
+nav a{color:white;text-decoration:none;}
+nav a:hover{color:#9f4aee;}
+
+.menu-btn{display:none;font-size:28px;cursor:pointer;}
+
+.theme-btn{
+background:#9f4aee;
+border:none;
+color:white;
+padding:6px 10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+
+/* Home */
+
+.home{
+height:100vh;
+display:flex;
+align-items:center;
+padding:100px 50px;
+}
+
+.home-container{
+display:flex;
+gap:200px;              /* Reduce space */
+width:100%;
+justify-content:flex-start; /* Bring items closer */
+align-items:center;
+}
+
+.profile-pic{
+    margin-right:-80px;
+}
+.profile-pic img{
+width:220px;
+border-radius:50%;
+border:4px solid #9f4aee;
+
+
+/* Constant Shadow / Glow */
+box-shadow: 0 0 25px rgba(159, 74, 238, 0.9);
+
+transition: 0.3s ease;
+}
+
+/* Extra glow on hover */
+.profile-pic img:hover{
+box-shadow: 0 0 40px rgba(159, 74, 238, 1);
+transform: scale(1.05);
+}
+
+
+
+/* Buttons */
+
+.btn{
+background:#9f4aee;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.btn-outline{
+border:2px solid #9f4aee;
+background:none;
+color:white;
+padding:10px 20px;
+cursor:pointer;
+}
+
+
+/* Section */
+
+.section{
+padding:100px 50px;
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.section h2{
+text-align:center;
+color:#9f4aee;
+margin-bottom:40px;
+}
+
+
+/* About */
+
+.about-box{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.card{
+background:#0e0e1a;
+padding:20px;
+border-radius:10px;
+
+/* Smooth animation */
+transition: all 0.3s ease;
+
+/* Light default shadow */
+box-shadow: 0 0 10px rgba(159, 74, 238, 0.3);
+}
+
+/* When cursor moves on card */
+.card:hover{
+box-shadow: 0 0 30px rgba(159, 74, 238, 0.9);
+transform: translateY(-6px);
+}
+
+
+
+/* Skills */
+
+/* Skills Section */
+
+.skill{
+max-width:800px;
+margin:0 auto;
+}
+
+/* Each Skill Row */
+
+.skill-item{
+margin-bottom:20px;
+}
+
+/* Skill Title + Percentage */
+
+.skill-item p{
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+margin-bottom:6px;
+font-size:16px;
+font-weight:500;
+}
+
+/* Bar Background */
+
+.bar{
+width:100%;
+height:12px;
+background:#2a2a2a;
+border-radius:10px;
+overflow:hidden;
+
+box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+/* Filled Bar */
+
+.progress{
+height:100%;
+width:0;
+background:linear-gradient(90deg,#9f4aee,#c77dff);
+border-radius:10px;
+
+transition:width 2s ease-in-out;
+}
+
+
+
+
+/* Skill Bar */
+
+.bar{
+height:12px;
+background:#333;
+border-radius:10px;
+overflow:hidden;
+box-shadow: 0 0 8px rgba(159,74,238,0.4);
+}
+
+.progress{
+height:100%;
+width:0;
+background: linear-gradient(90deg, #9f4aee, #c77dff);
+border-radius:10px;
+
+transition: width 2s ease-in-out;
+}
+
+
+
+
+/* Projects */
+
+.project-box{
+max-width:900px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.project-card{
+background:#0e0e1a;
+padding:25px;
+border-radius:15px;
+border:1px solid rgba(159,74,238,0.2);
+transition:0.4s;
+cursor:pointer;
+}
+
+.project-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px #9f4aee;
+}
+
+
+/* Experience */
+
+/* Experience Section */
+
+.experience-box{
+max-width:900px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+.experience-card{
+background:#0e0e1a;
+padding:30px;
+border-radius:18px;
+border:1px solid rgba(159,74,238,0.3);
+
+box-shadow:0 0 15px rgba(159,74,238,0.3);
+transition:0.3s;
+}
+
+.experience-card:hover{
+box-shadow:0 0 30px rgba(159,74,238,0.8);
+transform:translateY(-5px);
+}
+
+.experience-card h3{
+margin-bottom:8px;
+color:#fff;
+}
+
+.company{
+color:#c77dff;
+font-weight:500;
+}
+
+.duration{
+color:#aaa;
+font-size:14px;
+margin-bottom:12px;
+}
+
+.experience-card ul{
+margin:15px 0;
+padding-left:20px;
+}
+
+.experience-card li{
+margin-bottom:6px;
+}
+
+.cert-btn{
+margin-top:15px;
+}
+
+
+
+/* Certifications */
+
+.cert-box{
+max-width:900px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.cert-card{
+background:#0e0e1a;
+padding:25px;
+border-radius:15px;
+text-align:center;
+border:1px solid rgba(159,74,238,0.2);
+transition:0.4s;
+}
+
+.cert-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px #9f4aee;
+}
+
+
+/* Contact */
+
+.contact-box{max-width:600px;margin:auto;}
+
+input,textarea{
+width:100%;
+padding:10px;
+margin-bottom:15px;
+border:none;
+border-radius:5px;
+}
+/* Get In Touch Section */
+
+.get-in-touch{
+text-align:center;
+background:linear-gradient(135deg,#050520,#0b0b2e);
+border-radius:20px;
+padding:80px 30px;
+margin:60px auto;
+max-width:1200px;
+}
+
+.get-in-touch h2{
+font-size:36px;
+margin-bottom:15px;
+color:#9f4aee;
+}
+
+.touch-text{
+color:#bdbddb;
+max-width:700px;
+margin:0 auto 50px;
+font-size:16px;
+line-height:1.6;
+}
+
+
+/* Container */
+
+.touch-container{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+justify-items:center;
+}
+
+
+/* Cards */
+
+.touch-box{
+background:#0e0e1a;
+padding:25px 30px;
+border-radius:18px;
+width:100%;
+max-width:400px;
+
+display:flex;
+align-items:center;
+gap:18px;
+
+box-shadow:0 0 18px rgba(159,74,238,0.35);
+transition:0.3s ease;
+}
+
+.touch-box:hover{
+box-shadow:0 0 35px rgba(159,74,238,0.9);
+transform:translateY(-6px);
+}
+
+
+/* Icon */
+
+.touch-icon{
+width:50px;
+height:50px;
+border-radius:50%;
+background:linear-gradient(135deg,#9f4aee,#6f42c1);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:22px;
+flex-shrink:0;
+}
+
+
+/* Text */
+
+.touch-box h4{
+margin:0;
+font-size:18px;
+margin-bottom:5px;
+}
+
+.touch-box p{
+margin:0;
+font-size:15px;
+color:#ddd;
+
+/* Force single line */
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+
+
+/* Mobile Responsive */
+
+@media(max-width:900px){
+
+.touch-container{
+grid-template-columns:1fr;
+}
+
+}
+
+
+
+
+/* Footer */
+
+footer{
+background:#020a1a;
+text-align:center;
+padding:20px;
+}
+
+
+/* Social */
+
+.social-buttons{
+position:fixed;
+bottom:25px;
+right:25px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.social-btn{
+width:50px;
+height:50px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+font-size:22px;
+text-decoration:none;
+transition: all 0.3s ease;
+box-shadow: 0 0 0 rgba(0,0,0,0); /* no shadow by default */
+}
+
+.linkedin{background:#0077b5;}
+.whatsapp{background:#25D366;}
+.email{background:#EA4335;}
+
+.social-btn:hover{
+box-shadow: 0 0 25px rgba(255,255,255,0.7);
+transform: scale(1.1);
+}
+/* Modal */
+
+.modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.modal.show{display:flex;}
+
+.modal-content{
+background:#131735;
+padding:25px;
+border-radius:12px;
+text-align:center;
+width:300px;
+}
+/* Mobile Call Button */
+/* Call Button Always Visible */
+
+.phone{
+background:#4CAF50;
+display:flex;   /* Always show */
+}
+/* Dark Mode Button */
+
+.theme-btn{
+background:#9f4aee;
+border:none;
+color:white;
+padding:6px 10px;
+border-radius:5px;
+cursor:pointer;
+font-size:18px;
+}
+
+
+/* Light Mode */
+
+body.light{
+background:#f4f4f4;
+color:#111;
+}
+
+body.light nav{
+background:#ffffff;
+}
+
+body.light .card,
+body.light .project-card,
+body.light .cert-card,
+body.light .experience-card,
+body.light .touch-box{
+background:#ffffff;
+color:#111;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+body.light footer{
+background:#ddd;
+color:#111;
+}
+
+body.light .bar{
+background:#ccc;
+}
+/* ===== Mobile Menu ===== */
+
+@media (max-width: 768px){
+
+  .menu-btn{
+    display:block;
+  }
+
+  nav ul{
+    display:none;
+    flex-direction:column;
+    background:#020a1a;
+
+    position:absolute;
+    top:70px;
+    right:20px;
+
+    padding:15px 20px;
+    border-radius:10px;
+    width:150px;
+  }
+
+  /* When menu is active */
+  nav ul.active{
+    display:flex;
+  }
+
+  nav ul li{
+    margin:10px 0;
+    text-align:center;
+  }
+}
