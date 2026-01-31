@@ -72,10 +72,13 @@ window.addEventListener("scroll", () => {
 
 // ================= MOBILE MENU =================
 
-document.getElementById("menuBtn").onclick = () => {
+// Mobile Menu Toggle
 
-  document.getElementById("menu").classList.toggle("active");
+const menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
 
+menuBtn.onclick = () => {
+  menu.classList.toggle("active");
 };
 
 
